@@ -15,6 +15,15 @@ class HelloResourceTest {
                 .when().get("/hello")
                 .then()
                 .statusCode(200)
-                .body(is("Hello World"));
+                .body(is("Hello World 1.0"));
+    }
+
+    @Test
+    void byeEndpointReturnsByeWorld() {
+        given()
+                .when().get("/bye")
+                .then()
+                .statusCode(200)
+                .body(is("Bye World"));
     }
 }
